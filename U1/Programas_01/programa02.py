@@ -5,8 +5,10 @@ d = 1.5
 e = 2.5
 f = "hola"
 
-variables = [a, b, c, d, f]
-
-for variable in variables:
-    print(variable)
-    print(type(variable))
+print(a, b, c, d, e, f)
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+print(type(f))
