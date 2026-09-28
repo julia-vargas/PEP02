@@ -1,0 +1,8 @@
+n1 = int(input("Introduzca el primer numero:"))
+n2 = int(input("Introduzca el segundo numero:"))
+print("Su suma es: ", n1 + n2)
+print("Su resta es: ", n1 - n2)
+print("Su multiplicacion es: ", n1 * n2)
+print("Su division es: ", n1 / n2)
+print("Su modulo es: ", n1 % n2)
+print("Su potencia es: ", n1**n2)
