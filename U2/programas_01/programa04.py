@@ -15,11 +15,16 @@
 
 num = int(input("Introduzca la nota:"))
 
-if (num >= 0) and (num <5):
-    print("Insuficiente")
-elsif (num >= 0) and (num <= 10):
-
-    
-    
-else:
-    print("El numero no se encientra comprendido entre el 0 y el 10")
+match num:
+    case 0 | 1 | 2 | 3 | 4:  # En lugar de hacer 80 case, puedo separarlo con pipelines
+        print("Insuficiente")
+    case 5:
+        print("Suficiente")
+    case 6:
+        print("Bien")
+    case 7 | 8:
+        print("Notable")
+    case 9 | 10:
+        print("Sobresaliente")
+    case _:
+        print("La nota no es válida")
