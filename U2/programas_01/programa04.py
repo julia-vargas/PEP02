@@ -15,7 +15,11 @@
 
 num = int(input("Introduzca la nota:"))
 
-if (num >= 0) and (num <= 10):
-    print("Su división es: ", n1 / n2)
+if (num >= 0) and (num <5):
+    print("Insuficiente")
+elsif (num >= 0) and (num <= 10):
+
+    
+    
 else:
-    print("No se puede dividor entre 0")
+    print("El numero no se encientra comprendido entre el 0 y el 10")
