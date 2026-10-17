@@ -1,30 +1,38 @@
 # programa09
-# Escribe un programa para jugar a una versión muy simplificada del black jack. En primer
-# lugar el ordenador obtendrá un número aleatorio entre 17 y 21 (está será su jugada). A
-# continuación el jugador ira sacando cartas (con valores entre 1 y 5), que se irán sumando
-# para obtener su puntuación, hasta que el quiera. Si se pasa de 21 pierde, si obtiene una
-# puntuación igual o menor que la banca pierde, y si obtiene una puntuación superior a la
-# banca gana.
+# Escribe un programa en Python que simule el juego de piedra, papel o tijera. En primer
+# lugar el programa tendrá que mostrar un mensaje por pantalla al usuario para preguntarle
+# qué opción desea elegir. Por ejemplo:
+# 1. Piedra
+# 2. Papel
+# 3. Tijera
+# Seleccione una opción (1, 2 o 3):
+# Después de leer la opción seleccionada por el usuario el programa generará un número
+# aleatorio para simular una jugada y mostrará un mensaje indicando si el usuario ha
+# ganado o ha perdido dependiendo del resultado.
+# Ten en cuenta que:
+#  La piedra gana a la tijera pero pierde contra el papel.
+#  El papel gana a la piedra pero pierde contra la tijera.
+#  La tijera gana al papel pero pierde contra la piedra.
 
 import random
 
-baza_ordenador = random.randrange(17, 22)  # Ya me devuelve un int así que no hago cast
-baza_jugador = random.randrange(1, 6)
-sacar_carta = ""  # Lo incializo a cualqioer cosa menos un si o un no
-print("Numero jugador: ", baza_jugador)
+print("1. Piedra")
+print("2. Papel")
+print("3. Tijera")
+jugador = int(input("Seleccione una opción (1, 2 o 3): "))
 
+maquina = random.randrange(1, 4)
 
-while sacar_carta != "no":  # Hasta que no quiera dejar de sacar cartas, no para
-    sacar_carta = input("Desea sacar otra carta más?: (si, no)")
-    if sacar_carta == "si":
-        baza_jugador = baza_jugador + random.randrange(1, 6)
-        print("Numero jugador: ", baza_jugador)
+# Para ver si lo hace bien
+print(jugador)
+print(maquina)
 
-if (baza_jugador > 21) or (
-    baza_jugador <= baza_ordenador
-):  # Si tiene mas de 21 o tiene igual o menos que el ordenador, peride
-    print("El jugador ha perdido")
+if (jugador >= 1 and jugador <= 3):
+    if jugador == maquina:
+        print("Empate")
+    elif (jugador == 1 and maquina == 3) or (jugador == 2 and maquina == 1) or (jugador == 3 and maquina == 2):
+        print("Ha ganado el jugador")
+    else: # si no es ni empate ni victoria, pierde
+        print("Ha ganado la maquina")
 else:
-    print("El jugador ha ganado")
-
-print("Numero ordenador: ", baza_ordenador)
+    print("Opcion no valida. Reinicie el programa")
