@@ -9,13 +9,14 @@
 # indica que no quiere continuar el programa finaliza.
 continuar = True
 
-num = 0
-while num < 1 or num > 10:
-    num = int(input("Introduzca un numero del 1 al 10"))
-    
-for i in range(1, 11):
-    print (i, " x ", num, " = ", i * num())
-    
-opc = int(input("¿Desea continuar? Pulse 1 para sí, sualquier otra tecla para no"))
-if opc != 1:
-    continuar = False
+while continuar == True:
+    num = 0
+    while num < 1 or num > 10:
+        num = int(input("Introduzca un numero del 1 al 10"))
+        
+    for i in range(1, 11):
+        print(i, " x ", num, " = ", i * num)
+        
+    opc = int(input("¿Desea continuar? Pulse 1 para sí, sualquier otra tecla para no"))
+    if opc != 1:
+        continuar = False
