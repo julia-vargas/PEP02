@@ -1,0 +1,18 @@
+# programa02
+# Escribe un programa que pida un número y muestre una lista de números desde 1 al
+# número. Se debe controlar que el número no se menor que 1 ni mayor que 10, si es así se
+# pedirá que si introduzca de nuevo, y así hasta que se introduzca el número correcto.
+# Controla las posibles excepciones a la hora de introducir el número por teclado.
+
+num = 0
+
+while num < 1 or num > 10:
+    try:
+        num = int(input("Introduzca un número del 1 al 10"))
+        if num < 1 or num > 10:
+            print("El número debe estar entre 1 y 10.")
+    except Exception as ex:
+        print("Error, intriduzca un número válido")
+        
+for i in range (1, num + 1):
+    print(i)
