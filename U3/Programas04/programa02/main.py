@@ -30,8 +30,8 @@ def main():
     """Función principal del programa"""
     print("Hola, este es el programa principal")
 
-    opc = "" 
-    while opc != "4": # con texto potque el input es un string
+    opc = ""
+    while opc != "4":  # con texto potque el input es un string
         print("1. Operaciones matemáticas")
         print("2. Cálculo de áreas geométricas")
         print("3. Conversiones")
@@ -44,14 +44,14 @@ def main():
                 while opc_1 != "5":
                     a = float(input("Introduzca el primer número: "))
                     b = float(input("Introduzca el segundo número: "))
-                    
+
                     print("1. Suma")
                     print("2. Resta")
                     print("3. Multiplicación")
                     print("4. División")
                     print("5. Volver al menú principal")
                     opc_1 = input("Introduzca la opción que desea: ")
-            
+
                     match opc_1:
                         case "1":
                             print("Resultado:", operaciones.suma(a, b))
@@ -79,11 +79,17 @@ def main():
                         case "1":
                             base = float(input("Introduzca la base: "))
                             altura = float(input("Introduzca la altura: "))
-                            print("Área del rectángulo:", figuras.area_rectangulo(base, altura))
+                            print(
+                                "Área del rectángulo:",
+                                figuras.area_rectangulo(base, altura),
+                            )
                         case "2":
                             base = float(input("Introduzca la base: "))
                             altura = float(input("Introduzca la altura: "))
-                            print("Área del triángulo:", figuras.area_triangulo(base, altura))
+                            print(
+                                "Área del triángulo:",
+                                figuras.area_triangulo(base, altura),
+                            )
                         case "3":
                             radio = float(input("Introduzca el radio: "))
                             print("Área del círculo:", figuras.area_circulo(radio))
@@ -120,7 +126,6 @@ def main():
                 print("Fin")
             case _:
                 print("Opción no válida")
-
 
 
 # Bloque para asegurar ejecución sólo si el archivo es el principal
